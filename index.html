@@ -86,7 +86,20 @@
 <!-- Navigation -->
 <nav class="bg-white shadow-md sticky top-0 z-40">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <div class="title-font text-3xl text-[#06D6A0]">Pousada Jatobá</div>
+
+        <!-- Logo + Nome -->
+        <div class="flex items-center space-x-2">
+            <img
+                    src="images/icone/jatoba_ic.jpg"
+                    alt="Ícone da Pousada Jatobá"
+                    class="w-8 h-8 sm:w-10 sm:h-10 object-cover rounded-git add .full border-2 border-[#06D6A0]"
+            >
+            <div class="title-font text-2xl sm:text-3xl text-[#06D6A0] font-semibold">
+                Pousada Jatobá
+            </div>
+        </div>
+
+        <!-- Botão do menu mobile -->
         <button id="menu-toggle" class="md:hidden focus:outline-none">
             <svg class="w-6 h-6 text-[#FF6B35]" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                  xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +107,17 @@
                       d="M4 6h16M4 12h16M4 18h16"></path>
             </svg>
         </button>
+
+        <!-- Menu de navegação -->
         <div id="menu" class="hidden md:flex space-x-8">
-            <a href="#home" class="text-[#A17C5E] hover:text-[#06D6A0]">Home</a>
-            <a href="#acomodacoes" class="text-[#A17C5E] hover:text-[#06D6A0]">Acomodações</a>
-            <a href="#experiencias" class="text-[#A17C5E] hover:text-[#06D6A0]">Experiências</a>
-            <a href="#estrutura" class="text-[#A17C5E] hover:text-[#06D6A0]">Estrutura</a>
-            <a href="#cachoeiras" class="text-[#A17C5E] hover:text-[#06D6A0]">Cachoeiras</a>
-            <a href="#pets" class="text-[#A17C5E] hover:text-[#06D6A0]">Pets</a>
-            <a href="#depoimentos" class="text-[#A17C5E] hover:text-[#06D6A0]">Depoimentos</a>
-            <a href="#contato" class="text-[#A17C5E] hover:text-[#06D6A0]">Contato</a>
+            <a href="#home" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Home</a>
+            <a href="#acomodacoes" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Acomodações</a>
+            <a href="#experiencias" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Experiências</a>
+            <a href="#estrutura" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Estrutura</a>
+            <a href="#cachoeiras" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Cachoeiras</a>
+            <a href="#pets" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Pets</a>
+            <a href="#depoimentos" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Depoimentos</a>
+            <a href="#contato" class="text-[#A17C5E] hover:text-[#06D6A0] transition">Contato</a>
         </div>
     </div>
 </nav>
@@ -1075,7 +1090,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
                             </svg>
-                            <span><strong>E-mail:</strong> Marcia entre em contato</span>
+                            <span><strong>E-mail:</strong> Pousadajatobaencantada@gmail.com</span>
                         </div>
                         <div class="flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-[#FF6B35]" fill="none"
@@ -1085,7 +1100,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
-                            <span><strong>Endereço:</strong> Cavalcante, GO - Chapada dos Veadeiros</span>
+                            <span><strong>Endereço:</strong> Cavalcante-GO - Chapada dos Veadeiros</span>
                         </div>
                     </div>
 
@@ -1227,6 +1242,51 @@
     <div id="lightbox" class="lightbox" onclick="closeLightbox()">
         <span class="close-lightbox">&times;</span>
         <div id="lightbox-content" class="lightbox-content"></div>
+    </div>
+    <!-- Modal da Galeria -->
+    <div id="gallery-modal"
+         class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-start justify-center pt-10 px-4 hidden">
+        <div class="bg-white rounded-lg max-w-6xl max-h-full overflow-hidden w-full shadow-2xl">
+            <!-- Cabeçalho com X para fechar -->
+            <div class="flex justify-between items-center p-4 border-b">
+                <h3 id="gallery-modal-title" class="text-2xl font-bold text-gray-800">Galeria Completa</h3>
+                <button
+                        onclick="closeGalleryModal()"
+                        class="text-3xl text-gray-600 hover:text-gray-800 transition duration-200 transform hover:scale-110"
+                        aria-label="Fechar galeria"
+                >
+                    &times;
+                </button>
+            </div>
+
+            <!-- Abas de Seções -->
+            <div class="flex flex-wrap border-b px-4 bg-gray-50">
+                <button class="tab-button active px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600"
+                        data-section="all">Todas
+                </button>
+                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                        data-section="acomodacoes">Acomodações
+                </button>
+                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="estrutura">
+                    Estrutura
+                </button>
+                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                        data-section="experiencia">Natureza
+                </button>
+                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="pets">
+                    Pets
+                </button>
+                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                        data-section="cachoeiras">Cachoeiras
+                </button>
+            </div>
+
+            <!-- Conteúdo da Galeria -->
+            <div id="gallery-content"
+                 class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 p-4 max-h-96 overflow-y-auto">
+                <!-- Imagens carregadas via JS -->
+            </div>
+        </div>
     </div>
     <script>
         // --- Função para abrir o Modal de Acomodações ---
@@ -1591,112 +1651,196 @@
             }
         });
 
-        // --- Função para abrir a Galeria Completa ---
-        function openGalleryModal() {
-            const galleryContent = document.getElementById('gallery-content');
-            galleryContent.innerHTML = '';
 
-            // Lista completa de caminhos das imagens
-            const images = [
-                '/images/acomodacoes/amora/amora_entrada.jpg',
-                '/images/acomodacoes/amora/amora_quarto.jpg',
-                '/images/acomodacoes/amora/amora_quarto2.jpg',
-                '/images/acomodacoes/amora/amora_banheiro.jpg',
-                '/images/acomodacoes/mangaba/mangaba_entrada.jpg',
-                '/images/acomodacoes/mangaba/mangaba_quarto.jpg',
-                '/images/acomodacoes/mangaba/mangaba_banheiro.jpg',
-                '/images/acomodacoes/buriti/buriti_entrada.jpg',
-                '/images/acomodacoes/buriti/buriti_quarto.jpg',
-                '/images/acomodacoes/buriti/buriti_quarto1.jpg',
-                '/images/acomodacoes/buriti/buriti_quarto2.jpg',
-                '/images/acomodacoes/buriti/buriti_quarto3.jpg',
-                '/images/acomodacoes/buriti/buriti_quarto4.jpg',
-                '/images/acomodacoes/buriti/buriti_banheiro.jpg',
-                '/images/acomodacoes/tamarindo/tamarindo_entrada.jpg',
-                '/images/acomodacoes/tamarindo/tamarindo_quarto.jpg',
-                '/images/acomodacoes/tamarindo/tamarindo_quarto2.jpg',
-                '/images/acomodacoes/tamarindo/tamarindo_quarto3.jpg',
-                '/images/acomodacoes/tamarindo/tamarindo_banheiro.jpg',
-                '/images/acomodacoes/pequi/pequi_entrada.jpg',
-                '/images/acomodacoes/pequi/pequi_quarto.jpg',
-                '/images/acomodacoes/pequi/pequi_banheiro.jpg',
-                '/images/acomodacoes/caja/caja_entrada.jpg',
-                '/images/acomodacoes/caja/caja_quarto.jpg',
-                '/images/acomodacoes/caja/caja_quarto2.jpg',
-                '/images/acomodacoes/baru/baru_entrada.jpg',
-                '/images/acomodacoes/baru/baru_quarto.jpg',
-                '/images/acomodacoes/baru/baru_varanda.jpg',
-                '/images/acomodacoes/baru/baru_banheiro.jpg',
-                '/images/acomodacoes/caju/caju_entrada.jpg',
-                '/images/acomodacoes/caju/caju_quarto.jpg',
-                '/images/estrutura/cozinha_1.jpg',
-                '/images/estrutura/cozinha_2.jpg',
-                '/images/estrutura/cozinha_3.jpg',
-                '/images/estrutura/cozinha_4.jpg',
-                '/images/estrutura/cozinha_5.jpg',
-                '/images/estrutura/entrada.jpg',
-                '/images/estrutura/jacuzzi.jpg',
-                '/images/estrutura/quintal.jpg',
-                '/images/estrutura/quintal_1.jpg',
-                '/images/estrutura/quintal_2.jpg',
-                '/images/estrutura/quintal_3.jpg',
-                '/images/estrutura/varanda.jpg',
-                '/images/estrutura/varanda_1.jpg',
-                '/images/estrutura/varanda_2.jpg',
-                '/images/estrutura/varanda_3.jpg',
-                '/images/estrutura/varanda_4.jpg',
-                '/images/experiencia/arara.jpg',
-                '/images/experiencia/flor.jpg',
-                '/images/experiencia/flor_1.jpg',
-                '/images/experiencia/flor_2.jpg',
-                '/images/experiencia/flor_3.jpg',
-                '/images/experiencia/flor_4.jpg',
-                '/images/experiencia/flor_5.jpg',
-                '/images/experiencia/flor_6.jpg',
-                '/images/experiencia/flor_7.jpg',
-                '/images/experiencia/flor_8.jpg',
-                '/images/experiencia/flor_9.jpg',
-                '/images/experiencia/flor_10.jpg',
-                '/images/experiencia/flor_11.jpg',
-                '/images/experiencia/fundo.jpg',
-                '/images/experiencia/jacuzzi_1.jpg',
-                '/images/experiencia/limoes.jpg',
-                '/images/experiencia/passarinho.jpg',
-                '/images/experiencia/passarinho_1.jpg',
-                '/images/experiencia/passarinho_2.jpg',
-                '/images/pets/pet_1.jpg',
-                '/images/pets/pet_2.jpg',
-                '/images/pets/pet_3.jpg',
-                '/images/pets/pet_4.jpg',
-                '/images/pets/pet_5.jpg',
-                '/images/pets/pet_6.jpg',
-                '/images/pets/pet_7.jpg',
-                '/images/pets/pet_8.jpg',
-                '/images/pets/pet_9.jpg',
-                '/images/pets/pet_10.jpg',
-                '/images/cachoeiras/santa_barbara.png',
-                '/images/cachoeiras/segredo.png',
-                '/images/cachoeiras/almecegas.png',
-                '/images/cachoeiras/almecegas_1.png',
-                '/images/cachoeiras/cristal.png',
-                '/images/cachoeiras/lapinha.png',
-                '/images/cachoeiras/loquinha.png',
-                '/images/cachoeiras/poco_encantado.png'
-            ];
+        // === Estrutura de seções ===
+        const gallerySections = {
+            acomodacoes: {
+                title: "Acomodações",
+                images: [
+                    '/images/acomodacoes/amora/amora_entrada.jpg',
+                    '/images/acomodacoes/amora/amora_quarto.jpg',
+                    '/images/acomodacoes/amora/amora_quarto2.jpg',
+                    '/images/acomodacoes/amora/amora_banheiro.jpg',
+                    '/images/acomodacoes/mangaba/mangaba_entrada.jpg',
+                    '/images/acomodacoes/mangaba/mangaba_quarto.jpg',
+                    '/images/acomodacoes/mangaba/mangaba_banheiro.jpg',
+                    '/images/acomodacoes/buriti/buriti_entrada.jpg',
+                    '/images/acomodacoes/buriti/buriti_quarto.jpg',
+                    '/images/acomodacoes/buriti/buriti_quarto1.jpg',
+                    '/images/acomodacoes/buriti/buriti_quarto2.jpg',
+                    '/images/acomodacoes/buriti/buriti_quarto3.jpg',
+                    '/images/acomodacoes/buriti/buriti_quarto4.jpg',
+                    '/images/acomodacoes/buriti/buriti_banheiro.jpg',
+                    '/images/acomodacoes/tamarindo/tamarindo_entrada.jpg',
+                    '/images/acomodacoes/tamarindo/tamarindo_quarto.jpg',
+                    '/images/acomodacoes/tamarindo/tamarindo_quarto2.jpg',
+                    '/images/acomodacoes/tamarindo/tamarindo_quarto3.jpg',
+                    '/images/acomodacoes/tamarindo/tamarindo_banheiro.jpg',
+                    '/images/acomodacoes/pequi/pequi_entrada.jpg',
+                    '/images/acomodacoes/pequi/pequi_quarto.jpg',
+                    '/images/acomodacoes/pequi/pequi_banheiro.jpg',
+                    '/images/acomodacoes/caja/caja_entrada.jpg',
+                    '/images/acomodacoes/caja/caja_quarto.jpg',
+                    '/images/acomodacoes/caja/caja_quarto2.jpg',
+                    '/images/acomodacoes/baru/baru_entrada.jpg',
+                    '/images/acomodacoes/baru/baru_quarto.jpg',
+                    '/images/acomodacoes/baru/baru_varanda.jpg',
+                    '/images/acomodacoes/baru/baru_banheiro.jpg',
+                    '/images/acomodacoes/caju/caju_entrada.jpg',
+                    '/images/acomodacoes/caju/caju_quarto.jpg'
+                ]
+            },
+            estrutura: {
+                title: "Estrutura da Pousada",
+                images: [
+                    '/images/estrutura/entrada.jpg',
+                    '/images/estrutura/varanda.jpg',
+                    '/images/estrutura/jacuzzi.jpg',
+                    '/images/estrutura/quintal.jpg',
+                    '/images/estrutura/quintal_1.jpg',
+                    '/images/estrutura/quintal_2.jpg',
+                    '/images/estrutura/quintal_3.jpg',
+                    '/images/estrutura/varanda_1.jpg',
+                    '/images/estrutura/varanda_2.jpg',
+                    '/images/estrutura/varanda_3.jpg',
+                    '/images/estrutura/varanda_4.jpg',
+                    '/images/estrutura/cozinha_1.jpg',
+                    '/images/estrutura/cozinha_2.jpg',
+                    '/images/estrutura/cozinha_3.jpg',
+                    '/images/estrutura/cozinha_4.jpg',
+                    '/images/estrutura/cozinha_5.jpg'
+                ]
+            },
+            experiencia: {
+                title: "Natureza e Experiência",
+                images: [
+                    '/images/experiencia/arara.jpg',
+                    '/images/experiencia/flor.jpg',
+                    '/images/experiencia/flor_1.jpg',
+                    '/images/experiencia/flor_2.jpg',
+                    '/images/experiencia/flor_3.jpg',
+                    '/images/experiencia/flor_4.jpg',
+                    '/images/experiencia/flor_5.jpg',
+                    '/images/experiencia/flor_6.jpg',
+                    '/images/experiencia/flor_7.jpg',
+                    '/images/experiencia/flor_8.jpg',
+                    '/images/experiencia/flor_9.jpg',
+                    '/images/experiencia/flor_10.jpg',
+                    '/images/experiencia/flor_11.jpg',
+                    '/images/experiencia/fundo.jpg',
+                    '/images/experiencia/jacuzzi_1.jpg',
+                    '/images/experiencia/limoes.jpg',
+                    '/images/experiencia/passarinho.jpg',
+                    '/images/experiencia/passarinho_1.jpg',
+                    '/images/experiencia/passarinho_2.jpg'
+                ]
+            },
+            pets: {
+                title: "Hóspedes Pet",
+                images: [
+                    '/images/pets/pet_1.jpg',
+                    '/images/pets/pet_2.jpg',
+                    '/images/pets/pet_3.jpg',
+                    '/images/pets/pet_4.jpg',
+                    '/images/pets/pet_5.jpg',
+                    '/images/pets/pet_6.jpg',
+                    '/images/pets/pet_7.jpg',
+                    '/images/pets/pet_8.jpg',
+                    '/images/pets/pet_9.jpg',
+                    '/images/pets/pet_10.jpg'
+                ]
+            },
+            cachoeiras: {
+                title: "Cachoeiras da Região",
+                images: [
+                    '/images/cachoeiras/santa_barbara.png',
+                    '/images/cachoeiras/segredo.png',
+                    '/images/cachoeiras/almecegas.png',
+                    '/images/cachoeiras/almecegas_1.png',
+                    '/images/cachoeiras/cristal.png',
+                    '/images/cachoeiras/lapinha.png',
+                    '/images/cachoeiras/loquinha.png',
+                    '/images/cachoeiras/poco_encantado.png'
+                ]
+            }
+        };
 
-            // Preencher o modal com todas as imagens
-            images.forEach((src, index) => {
-                const imgDiv = document.createElement('div');
-                imgDiv.className = 'h-48 bg-cover bg-center rounded-lg cursor-pointer';
-                imgDiv.style.backgroundImage = `url('${src}')`;
-                imgDiv.onclick = () => openLightbox(images, index);
-                galleryContent.appendChild(imgDiv);
+        // === Função para abrir o modal ===
+        function openGalleryModal(section = 'all') {
+            const modal = document.getElementById('gallery-modal');
+            const content = document.getElementById('gallery-content');
+            const title = document.getElementById('gallery-modal-title');
+
+            // Define qual conjunto mostrar
+            let imagesToDisplay = [];
+            let modalTitle = "Galeria Completa";
+
+            if (section !== 'all') {
+                const sec = gallerySections[section];
+                imagesToDisplay = sec?.images || [];
+                modalTitle = sec?.title || "Galeria";
+            } else {
+                // Todas as imagens
+                imagesToDisplay = Object.values(gallerySections).flatMap(sec => sec.images);
+            }
+
+            // Atualiza título
+            title.textContent = modalTitle;
+
+            // Renderiza imagens
+            content.innerHTML = '';
+            imagesToDisplay.forEach(imgSrc => {
+                const img = document.createElement('img');
+                img.src = imgSrc;
+                img.classList.add('w-full', 'h-32', 'object-cover', 'rounded', 'cursor-pointer', 'transition', 'transform', 'hover:scale-105');
+                img.onclick = () => {
+                    window.open(imgSrc, '_blank'); // Abre em nova aba ao clicar
+                };
+                content.appendChild(img);
             });
 
-            document.getElementById('gallery-modal').classList.remove('hidden');
-            document.body.style.overflow = 'hidden';
+            // Mostra modal
+            modal.classList.remove('hidden');
         }
+
+
+        // === Função para fechar o modal ===
+        function closeGalleryModal() {
+            const modal = document.getElementById('gallery-modal');
+            modal.classList.add('hidden');
+        }
+
+        // === Fecha ao clicar na área escura (fora do conteúdo) ===
+        document.getElementById('gallery-modal')?.addEventListener('click', function (e) {
+            // Fecha apenas se clicar no fundo (não dentro do conteúdo branco)
+            if (e.target === this) {
+                closeGalleryModal();
+            }
+        });
+
+        // === Abas de navegação (mantenha isso também) ===
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabButtons = document.querySelectorAll('.tab-button');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    tabButtons.forEach(btn => {
+                        btn.classList.remove('active', 'text-blue-600', 'border-blue-600');
+                        btn.classList.add('text-gray-600');
+                    });
+                    this.classList.add('active', 'text-blue-600', 'border-blue-600');
+                    this.classList.remove('text-gray-600');
+
+                    const section = this.getAttribute('data-section');
+                    openGalleryModal(section);
+                });
+            });
+
+            // Abre com "Todas" como padrão
+            openGalleryModal('all');
+        });
     </script>
+
 </body>
 
 </html>
