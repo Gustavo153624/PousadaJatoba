@@ -596,8 +596,10 @@
         <p class="text-center text-xl text-[#A17C5E] mb-12">Trilhas exclusivas levam você a quedas d'água
             cristalinas</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cachoeira Santa Bárbara -->
+        <!-- Grid: 3 colunas em desktop, 2 em tablet, 1 em mobile -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cachoeiras-grid">
+
+            <!-- Cachoeira 1: Santa Bárbara (visível) -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="/images/cachoeiras/santa_barbara.png" alt="Cachoeira Santa Bárbara"
                      class="w-full h-48 object-cover">
@@ -630,7 +632,7 @@
                 </div>
             </div>
 
-            <!-- Cachoeira do Segredo -->
+            <!-- Cachoeira 2: Cachoeira do Segredo (visível) -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="/images/cachoeiras/segredo.png" alt="Cachoeira do Segredo" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -662,7 +664,7 @@
                 </div>
             </div>
 
-            <!-- Almécegas I e II -->
+            <!-- Cachoeira 3: Almécegas I e II (visível) -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
                 <img src="/images/cachoeiras/almecegas.png" alt="Almécegas I e II" class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -694,8 +696,9 @@
                 </div>
             </div>
 
-            <!-- Cachoeira do Cristal -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <!-- Cachoeira 4: Cachoeira do Cristal (oculta) -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+                 id="cristal-card">
                 <img src="/images/cachoeiras/cristal.png" alt="Cachoeira do Cristal" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Cristal</h3>
@@ -721,12 +724,14 @@
                         azul-turquesa. Poço raso e largo, cercado por pedras lisas.</p>
                     <button onclick="openCachoeiraModal('cristal')"
                             class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                        Saiba mais
                     </button>
                 </div>
             </div>
 
-            <!-- Cachoeira do Loquinhas -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <!-- Cachoeira 5: Cachoeira do Loquinhas (oculta) -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+                 id="loquinhas-card">
                 <img src="/images/cachoeiras/loquinha.png" alt="Cachoeira do Loquinhas"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
@@ -758,8 +763,9 @@
                 </div>
             </div>
 
-            <!-- Poço Encantado -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <!-- Cachoeira 6: Poço Encantado (oculto) -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+                 id="poco-encantado-card">
                 <img src="/images/cachoeiras/poco_encantado.png" alt="Poço Encantado" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Poço Encantado</h3>
@@ -790,8 +796,9 @@
                 </div>
             </div>
 
-            <!-- Gruta da Lapinha -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <!-- Cachoeira 7: Gruta da Lapinha (oculta) -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+                 id="lapinha-card">
                 <img src="/images/cachoeiras/lapinha.png" alt="Gruta da Lapinha" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Gruta da Lapinha</h3>
@@ -821,6 +828,16 @@
                     </button>
                 </div>
             </div>
+
+        </div>
+
+        <!-- Botão para mostrar mais cachoeiras -->
+        <div class="text-center mt-10">
+            <button id="toggle-cachoeiras-btn"
+                    class="bg-[#06D6A0] hover:bg-[#05c18d] text-white py-3 px-6 rounded-full font-semibold transition-colors"
+                    onclick="toggleCachoeiras()">
+                Ver mais cachoeiras
+            </button>
         </div>
     </div>
 </section>
@@ -1319,7 +1336,7 @@
             <div class="flex justify-between items-center p-4 border-b">
                 <h3 id="gallery-modal-title" class="text-2xl font-bold text-gray-800">Galeria Completa</h3>
                 <button
-                        onclick="closeGalleryModal()"
+                        onclick="closeModal()"
                         class="text-3xl text-gray-600 hover:text-gray-800 transition duration-200 transform hover:scale-110"
                         aria-label="Fechar galeria"
                 >
@@ -1745,6 +1762,24 @@
         }
 
         // ==============================
+        // SAIBA MAIS CACHOEIRAS
+        // ==============================
+        function toggleCachoeiras() {
+            const hiddenCards = document.querySelectorAll('#cachoeiras-grid .hidden');
+            const button = document.getElementById('toggle-cachoeiras-btn');
+
+            const anyHidden = [...hiddenCards].some(card => card.classList.contains('hidden'));
+
+            if (anyHidden) {
+                hiddenCards.forEach(card => card.classList.remove('hidden'));
+                button.textContent = 'Ver menos';
+            } else {
+                hiddenCards.forEach(card => card.classList.add('hidden'));
+                button.textContent = 'Ver mais cachoeiras';
+            }
+        }
+
+        // ==============================
         // 🌊 MODAL DE CACHOEIRA
         // ==============================
 
@@ -1927,10 +1962,6 @@
             openModal('gallery-modal');
         }
 
-        function closeGalleryModal() {
-            const modal = document.getElementById('gallery-modal');
-            if (modal) modal.classList.add('hidden');
-        }
 
         // Fechar ao clicar fora do conteúdo
         document.getElementById('gallery-modal').addEventListener('click', function (e) {
