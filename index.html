@@ -72,6 +72,9 @@
             cursor: pointer;
         }
 
+        .z-modal-high {
+            z-index: 9999 !important;
+        }
     </style>
 </head>
 <body class="font-['Lato'] bg-[#F8F5F2]">
@@ -102,6 +105,7 @@
             <a href="#cachoeiras" class="text-[#A17C5E] hover:text-[#06D6A0]">Cachoeiras</a>
             <a href="#pets" class="text-[#A17C5E] hover:text-[#06D6A0]">Pets</a>
             <a href="#depoimentos" class="text-[#A17C5E] hover:text-[#06D6A0]">Depoimentos</a>
+            <a href="#galeria" class="text-[#A17C5E] hover:text-[#06D6A0]">Galeria</a>
             <a href="#contato" class="text-[#A17C5E] hover:text-[#06D6A0]">Contato</a>
         </div>
     </div>
@@ -110,7 +114,7 @@
 <!-- Home Section -->
 <section id="home"
          class="relative h-screen flex items-center justify-center bg-cover bg-center"
-         style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('images/experiencia/fundo.jpg')"
+         style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('/images/experiencia/fundo.jpg')"
          aria-label="Pousada Jatobá: Refúgio na natureza de Cavalcante, próximo às cachoeiras da Chapada dos Veadeiros">
     <div class="text-center text-white px-4 drop-shadow-lg animate-fade-in">
         <h1 class="title-font text-4xl sm:text-5xl md:text-7xl mb-4">Pousada Jatobá</h1>
@@ -152,7 +156,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <!-- Chalé Amora -->
             <div class="acomodacao-card chale casal pet hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/amora/amora_entrada.jpg" alt="Chalé Amora"
+                <img src="/images/acomodacoes/amora/amora_entrada.jpg" alt="Chalé Amora"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Amora</h3>
@@ -171,7 +175,7 @@
 
             <!-- Chalé Mangaba -->
             <div class="acomodacao-card chale familia pet hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/mangaba/mangaba_entrada.jpg" alt="Chalé Mangaba"
+                <img src="/images/acomodacoes/mangaba/mangaba_entrada.jpg" alt="Chalé Mangaba"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Mangaba</h3>
@@ -190,7 +194,7 @@
 
             <!-- Chalé Buriti -->
             <div class="acomodacao-card chale familia pet hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/buriti/buriti_entrada.jpg" alt="Chalé Buriti"
+                <img src="/images/acomodacoes/buriti/buriti_entrada.jpg" alt="Chalé Buriti"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Buriti</h3>
@@ -209,7 +213,7 @@
 
             <!-- Suíte Tamarindo -->
             <div class="acomodacao-card suite familia hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/tamarindo/tamarindo_entrada.jpg" alt="Suíte Tamarindo"
+                <img src="/images/acomodacoes/tamarindo/tamarindo_entrada.jpg" alt="Suíte Tamarindo"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Tamarindo</h3>
@@ -227,7 +231,7 @@
 
             <!-- Suíte Pequi -->
             <div class="acomodacao-card suite casal hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/pequi/pequi_entrada.jpg" alt="Suíte Pequi"
+                <img src="/images/acomodacoes/pequi/pequi_entrada.jpg" alt="Suíte Pequi"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Pequi</h3>
@@ -245,7 +249,7 @@
 
             <!-- Suíte Cajá -->
             <div class="acomodacao-card suite familia pet hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/caja/caja_entrada.jpg" alt="Suíte Cajá" class="w-full h-48 object-cover">
+                <img src="/images/acomodacoes/caja/caja_entrada.jpg" alt="Suíte Cajá" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cajá</h3>
                     <p class="text-[#A17C5E] mb-4">Suíte para até 4 pessoas</p>
@@ -263,7 +267,7 @@
 
             <!-- Suíte Barú -->
             <div class="acomodacao-card suite familia pet hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/baru/baru_entrada.jpg" alt="Suíte Barú" class="w-full h-48 object-cover">
+                <img src="/images/acomodacoes/baru/baru_entrada.jpg" alt="Suíte Barú" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Barú</h3>
                     <p class="text-[#A17C5E] mb-4">Suíte para até 3 pessoas</p>
@@ -281,7 +285,7 @@
 
             <!-- Suíte Caju -->
             <div class="acomodacao-card suite familia hover-float bg-white rounded-lg overflow-hidden shadow-lg transition-transform duration-300">
-                <img src="images/acomodacoes/caju/caju_entrada.jpg" alt="Suíte Caju" class="w-full h-48 object-cover">
+                <img src="/images/acomodacoes/caju/caju_entrada.jpg" alt="Suíte Caju" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Caju</h3>
                     <p class="text-[#A17C5E] mb-4">Suíte para até 3 pessoas</p>
@@ -498,7 +502,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Cachoeira Santa Bárbara -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/santa_barbara.png" alt="Cachoeira Santa Bárbara"
+                <img src="/images/cachoeiras/santa_barbara.png" alt="Cachoeira Santa Bárbara"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Santa Bárbara</h3>
@@ -531,7 +535,7 @@
 
             <!-- Cachoeira do Segredo -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/segredo.png" alt="Cachoeira do Segredo" class="w-full h-48 object-cover">
+                <img src="/images/cachoeiras/segredo.png" alt="Cachoeira do Segredo" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Segredo</h3>
                     <div class="flex items-center text-[#A17C5E] mb-4">
@@ -552,7 +556,7 @@
                         </svg>
                         <span>15 min de trilha (leve)</span>
                     </div>
-                    <p class="text-[#A17C5E] mb-4">Cachoeira que cai dentro em uma caverna natural, formando um poço com
+                    <p class="text-[#A17C5E] mb-4">Cachoeira que cai dentro de uma caverna natural, formando um poço com
                         águas geladas e transparentes.</p>
                     <button onclick="openCachoeiraModal('segredo')"
                             class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
@@ -563,7 +567,7 @@
 
             <!-- Almécegas I e II -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/almecegas.png" alt="Almécegas I e II" class="w-full h-48 object-cover">
+                <img src="/images/cachoeiras/almecegas.png" alt="Almécegas I e II" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Almécegas I e II</h3>
                     <div class="flex items-center text-[#A17C5E] mb-4">
@@ -595,7 +599,7 @@
 
             <!-- Cachoeira do Cristal -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/cristal.png" alt="Cachoeira do Cristal" class="w-full h-48 object-cover">
+                <img src="/images/cachoeiras/cristal.png" alt="Cachoeira do Cristal" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Cristal</h3>
                     <div class="flex items-center text-[#A17C5E] mb-4">
@@ -609,7 +613,7 @@
                         <span>~20 km do centro</span>
                     </div>
                     <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                        <svg xmlns="www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
                              stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                   d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
@@ -626,7 +630,7 @@
 
             <!-- Cachoeira do Loquinhas -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/loquinha.png" alt="Cachoeira do Loquinhas"
+                <img src="/images/cachoeiras/loquinha.png" alt="Cachoeira do Loquinhas"
                      class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Loquinhas</h3>
@@ -659,7 +663,7 @@
 
             <!-- Poço Encantado -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/poco_encantado.png" alt="Poço Encantado" class="w-full h-48 object-cover">
+                <img src="/images/cachoeiras/poco_encantado.png" alt="Poço Encantado" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Poço Encantado</h3>
                     <div class="flex items-center text-[#A17C5E] mb-4">
@@ -691,7 +695,7 @@
 
             <!-- Gruta da Lapinha -->
             <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="images/cachoeiras/lapinha.png" alt="Gruta da Lapinha" class="w-full h-48 object-cover">
+                <img src="/images/cachoeiras/lapinha.png" alt="Gruta da Lapinha" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Gruta da Lapinha</h3>
                     <div class="flex items-center text-[#A17C5E] mb-4">
@@ -734,21 +738,21 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/cozinha_1.jpg')"></div>
+                 style="background-image: url('/images/estrutura/cozinha_1.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/varanda.jpg')"></div>
+                 style="background-image: url('/images/estrutura/varanda.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/quintal.jpg')"></div>
+                 style="background-image: url('/images/estrutura/quintal.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/jacuzzi.jpg')"></div>
+                 style="background-image: url('/images/estrutura/jacuzzi.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/entrada.jpg')"></div>
+                 style="background-image: url('/images/estrutura/entrada.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/cozinha_2.jpg')"></div>
+                 style="background-image: url('/images/estrutura/cozinha_2.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/varanda_1.jpg')"></div>
+                 style="background-image: url('/images/estrutura/varanda_1.jpg')"></div>
             <div class="h-64 bg-cover bg-center rounded-lg"
-                 style="background-image: url('images/estrutura/quintal_1.jpg')"></div>
+                 style="background-image: url('/images/estrutura/quintal_1.jpg')"></div>
         </div>
     </div>
 </section>
@@ -800,17 +804,17 @@
                 <h3 class="text-2xl font-bold text-[#06D6A0] mb-4">Nossos hóspedes de quatro patas!</h3>
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-2">
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_1.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_1.jpg')"></div>
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_2.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_2.jpg')"></div>
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_3.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_3.jpg')"></div>
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_4.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_4.jpg')"></div>
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_5.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_5.jpg')"></div>
                     <div class="h-32 bg-cover bg-center rounded-lg"
-                         style="background-image: url('images/pets/pet_6.jpg')"></div>
+                         style="background-image: url('/images/pets/pet_6.jpg')"></div>
                 </div>
             </div>
         </div>
@@ -828,9 +832,8 @@
 
             <!-- Depoimento 1: Pedro Buchmann -->
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
-                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor"
-                     viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z"/>
+                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z" />
                 </svg>
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#FF6B35] to-[#D45A2C] rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -840,19 +843,19 @@
                         <h3 class="text-xl font-bold text-[#A17C5E]">Pedro Buchmann</h3>
                         <div class="flex text-[#FF6B35] text-sm">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                         </div>
                         <p class="text-xs text-[#888]">10 meses atrás</p>
@@ -865,9 +868,8 @@
 
             <!-- Depoimento 2: Thais Paiva -->
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
-                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor"
-                     viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z"/>
+                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z" />
                 </svg>
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#06D6A0] to-[#04b58a] rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -877,19 +879,19 @@
                         <h3 class="text-xl font-bold text-[#A17C5E]">Thais Paiva</h3>
                         <div class="flex text-[#FF6B35] text-sm">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                         </div>
                         <p class="text-xs text-[#888]">2 anos atrás</p>
@@ -902,9 +904,8 @@
 
             <!-- Depoimento 3: Llahisy Silva -->
             <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 relative">
-                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor"
-                     viewBox="0 0 24 24">
-                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z"/>
+                <svg class="absolute top-4 right-4 h-10 w-10 text-[#06D6A0] opacity-20" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h-8.983v10.001zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h-9v10.001z" />
                 </svg>
                 <div class="flex items-center mb-4">
                     <div class="w-12 h-12 bg-gradient-to-br from-[#A17C5E] to-[#8B6D4E] rounded-full flex items-center justify-center text-white font-bold mr-4">
@@ -914,27 +915,26 @@
                         <h3 class="text-xl font-bold text-[#A17C5E]">Llahisy Silva</h3>
                         <div class="flex text-[#FF6B35] text-sm">
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                             </svg>
                         </div>
                         <p class="text-xs text-[#888]">3 anos atrás</p>
                     </div>
                 </div>
                 <p class="text-[#333] italic leading-relaxed">
-                    "O lugar é lindo, bem organizado, pessoal atencioso, limpo. Recomendo! E a guia que organizou nosso
-                    roteiro foi incrível: <span class='text-[#06D6A0] font-medium'>62 99913-9950</span>."
+                    "O lugar é lindo, bem organizado, pessoal atencioso, limpo. Recomendo! E a guia que organizou nosso roteiro foi incrível: <span class='text-[#06D6A0] font-medium'>62 99913-9950</span>."
                 </p>
             </div>
 
@@ -1019,13 +1019,13 @@
                     <h4 class="text-xl font-bold text-[#A17C5E] mb-2">Fotos da Pousada</h4>
                     <div class="grid grid-cols-3 gap-2">
                         <div class="h-20 bg-cover bg-center rounded cursor-pointer"
-                             style="background-image: url('images/estrutura/entrada.jpg');"
+                             style="background-image: url('/images/estrutura/entrada.jpg');"
                              onclick="openGalleryModal()"></div>
                         <div class="h-20 bg-cover bg-center rounded cursor-pointer"
-                             style="background-image: url('images/estrutura/varanda.jpg');"
+                             style="background-image: url('/images/estrutura/varanda.jpg');"
                              onclick="openGalleryModal()"></div>
                         <div class="h-20 bg-cover bg-center rounded cursor-pointer"
-                             style="background-image: url('images/estrutura/jacuzzi.jpg');"
+                             style="background-image: url('/images/estrutura/jacuzzi.jpg');"
                              onclick="openGalleryModal()"></div>
                     </div>
                     <button onclick="openGalleryModal()"
@@ -1067,7 +1067,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                             </svg>
-                            <span><strong>Endereço:</strong> Cavalcante-GO - Chapada dos Veadeiros</span>
+                            <span><strong>Endereço:</strong> Cavalcante, GO - Chapada dos Veadeiros</span>
                         </div>
                     </div>
 

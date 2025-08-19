@@ -3,4 +3,7 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.12 (PythonProject1)" />
   </component>
+  <component name="ProjectResources">
+    <resource url="www.w3.org/2000/svg" location="$PROJECT_DIR$/pousadajatoba" />
+  </component>
 </project>
