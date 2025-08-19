@@ -12,13 +12,13 @@
             font-family: 'Pacifico', cursive;
         }
 
-
         .wood-sign {
             font-family: 'Lobster', cursive;
-            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJ3b29kIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2ExN2M1ZSIgb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3dvb2QpIi8+PC9zdmc+');
-            border: 3px solid #A17C5E;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJ3b29kIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzhiNWUzYyIgb3BhY2l0eT0iMC4xIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3dvb2QpIi8+PC9zdmc+');
+            border: 3px solid #8B5E3C;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
             position: relative;
+            color: #5D4037;
         }
 
         .wood-sign::before, .wood-sign::after {
@@ -26,7 +26,7 @@
             position: absolute;
             width: 15px;
             height: 15px;
-            background-color: #A17C5E;
+            background-color: #8B5E3C;
             border-radius: 50%;
         }
 
@@ -45,7 +45,46 @@
             transition: transform 0.3s ease;
         }
 
-        .lightbox {
+        /* Cores atualizadas para botões e títulos */
+        .text-[#06D6A0
+
+        ]
+        {
+            color: #2E8B57
+        ;
+        }
+        .text-\[\#06D6A0\] {
+            color: #2E8B57;
+        }
+
+        .bg-\[\#06D6A0\] {
+            background-color: #2E8B57;
+        }
+
+        .hover\:bg-\[\#05c18d\]:hover {
+            background-color: #236b43;
+        }
+
+        .text-\[\#A17C5E\] {
+            color: #8B5E3C;
+        }
+
+        .bg-\[\#A17C5E\] {
+            background-color: #8B5E3C;
+        }
+
+        .hover\:bg-\[\#8a6a4f\]:hover {
+            background-color: #7a5133;
+        }
+
+        /* Acento dourado opcional (para ícones ou bordas) */
+        .accent-gold {
+            color: #D4AF37;
+            border-color: #D4AF37;
+        }
+
+        /* Lightbox e Modal */
+        .lightbox, .modal-galeria {
             display: none;
             position: fixed;
             z-index: 999;
@@ -56,41 +95,28 @@
             background-color: rgba(0, 0, 0, 0.9);
         }
 
-        .lightbox-content {
+        .lightbox-content, .modal-galeria-conteudo {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100%;
+            width: 100%;
         }
 
-        .close-lightbox {
+        .close-lightbox, .fechar {
             position: absolute;
             top: 20px;
             right: 30px;
             color: white;
             font-size: 40px;
             cursor: pointer;
+            opacity: 0.8;
+            transition: all 0.3s;
         }
 
-        .modal-galeria {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            overflow: hidden;
-        }
-
-        .modal-galeria-conteudo {
-            width: 100%;
-            height: 100%;
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .close-lightbox:hover, .fechar:hover {
+            opacity: 1;
+            transform: scale(1.1);
         }
 
         #imagemModal {
@@ -98,6 +124,8 @@
             max-width: 90vw;
             object-fit: contain;
             cursor: zoom-in;
+            border: 2px solid #2E8B57;
+            border-radius: 8px;
         }
 
         .seta {
@@ -112,11 +140,13 @@
             user-select: none;
             border-radius: 5px;
             opacity: 0.7;
-            transition: opacity 0.3s;
+            transition: all 0.3s;
         }
 
         .seta:hover {
             opacity: 1;
+            background: rgba(0, 0, 0, 0.8);
+            transform: scale(1.1);
         }
 
         .seta-esquerda {
@@ -127,18 +157,9 @@
             right: 10px;
         }
 
-        .fechar {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-            font-size: 3rem;
-            color: white;
-            cursor: pointer;
-            opacity: 0.8;
-        }
-
-        .fechar:hover {
-            opacity: 1;
+        /* Fundo suave opcional para seções */
+        .bg-soft {
+            background-color: #fdfbf7; /* Bege muito claro */
         }
     </style>
 </head>
@@ -195,28 +216,45 @@
          class="relative h-screen flex items-center justify-center bg-cover bg-center"
          style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6)), url('/images/experiencia/fundo.jpg')"
          aria-label="Pousada Jatobá: Refúgio na natureza de Cavalcante, próximo às cachoeiras da Chapada dos Veadeiros">
-    <div class="text-center text-white px-4 drop-shadow-lg animate-fade-in">
-        <h1 class="title-font text-4xl sm:text-5xl md:text-7xl mb-4">Pousada Jatobá</h1>
-        <h2 class="text-xl sm:text-2xl md:text-3xl mb-6">Onde a Chapada começa a poucos passos</h2>
-        <p class="text-lg sm:text-xl mb-8">Chalés integrados à natureza, com vista para o cerrado e trilhas para as
-            cachoeiras de Cavalcante</p>
+
+    <!-- Conteúdo principal - agora subido com transform -->
+    <div class="text-center text-white px-6 md:px-8 max-w-4xl mx-auto relative z-10"
+         style="transform: translateY(-16px);">
+        <h1 class="title-font text-4xl sm:text-5xl md:text-7xl font-bold mb-6 sm:mb-8 leading-tight">
+            Pousada Jatobá
+        </h1>
+        <h2 class="text-xl sm:text-2xl md:text-3xl mb-6 sm:mb-8 leading-relaxed">
+            Onde a Chapada começa a poucos passos
+        </h2>
+        <p class="text-lg sm:text-xl mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto">
+            Chalés integrados à natureza, com vista para o cerrado e trilhas para as cachoeiras de Cavalcante.
+        </p>
         <a href="#acomodacoes"
-           class="bg-[#06D6A0] hover:bg-[#04b58a] hover:scale-105 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg">
+           class="inline-block bg-[#06D6A0] hover:bg-[#04b58a] hover:scale-105 text-white font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 shadow-md hover:shadow-lg">
             Descubra seu refúgio
         </a>
     </div>
 
-    <div class="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-30 backdrop-blur-sm wood-sign text-white text-xl px-6 py-3 rounded-lg text-center hover:rotate-2 transition-transform duration-300 max-w-xs">
+    <!-- Placa inferior -->
+    <div class="absolute bottom-8 sm:bottom-10 left-1/2 transform -translate-x-1/2
+              z-20 bg-black bg-opacity-30 backdrop-blur-sm wood-sign text-white text-lg sm:text-xl
+              px-6 py-3 rounded-lg text-center hover:rotate-2 transition-transform duration-300
+              max-w-xs sm:max-w-sm">
         Aqui, o tempo se dissolve. Só resta a natureza — e você.
     </div>
 </section>
 
 <!-- Acomodações Section -->
 <section id="acomodacoes" class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-        <h2 class="title-font text-4xl text-center text-[#06D6A0] mb-12">Nossos Chalés e Suítes</h2>
-        <p class="text-center text-xl text-[#A17C5E] mb-12">Feitos para você descansar em paz</p>
+    <div class="container mx-auto px-4 text-center">
+        <!-- Título principal -->
+        <h2 class="title-font text-4xl text-[#06D6A0] mb-6">Nossos Chalés e Suítes</h2>
 
+        <p class="text-xl text-[#A17C5E] mb-8">Feitos para você descansar em paz</p>
+
+        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 max-w-md mx-auto mb-4 hover:rotate-2 transition-transform duration-300">
+            "Paz não é ausência de barulho. É presença de silêncio."
+        </div>
         <!-- Filtros -->
         <div class="flex flex-wrap justify-center gap-4 mb-12">
             <button class="filter-btn bg-[#06D6A0] text-white px-4 py-2 rounded-full" data-filter="all">Todos</button>
@@ -389,7 +427,7 @@
 
         <!-- Título e descrição -->
         <h2 class="title-font text-4xl text-center text-[#06D6A0] mb-6">O que você vai viver aqui?</h2>
-        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md">
+        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md hover:rotate-2 transition-transform duration-300">
             Aqui, cada dia é uma nova trilha, um novo mergulho, uma nova paz.
         </div>
         <!-- Vídeo Centralizado -->
@@ -593,252 +631,255 @@
 <section id="cachoeiras" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <h2 class="title-font text-4xl text-center text-[#06D6A0] mb-6">Cachoeiras da Região</h2>
-        <p class="text-center text-xl text-[#A17C5E] mb-12">Trilhas exclusivas levam você a quedas d'água
-            cristalinas</p>
 
-        <!-- Grid: 3 colunas em desktop, 2 em tablet, 1 em mobile -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cachoeiras-grid">
+        <div class="bg-black bg-opacity-30 backdrop-blur-sm wood-sign text-white text-xl px-6 py-3 rounded-lg text-center hover:rotate-2 transition-transform duration-300 max-w-xs mx-auto mt-8">
+            Trilhas exclusivas levam você a quedas d'água cristalinas
+        </div>
+    </div>
 
-            <!-- Cachoeira 1: Santa Bárbara (visível) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="/images/cachoeiras/santa_barbara.png" alt="Cachoeira Santa Bárbara"
-                     class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Santa Bárbara</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~25 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>20 min de trilha (leve a moderada)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Queda d'água de cerca de 40 metros, poço profundo e águas
-                        cristalinas. Ambiente cercado pela mata nativa do Cerrado.</p>
-                    <button onclick="openCachoeiraModal('santa_barbara')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
+    <!-- Grid: 3 colunas em desktop, 2 em tablet, 1 em mobile -->
+    <div class="grid grid-cols-1 mt-12 md:grid-cols-2 lg:grid-cols-3 gap-8" id="cachoeiras-grid">
+
+        <!-- Cachoeira 1: Santa Bárbara (visível) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <img src="/images/cachoeiras/santa_barbara.png" alt="Cachoeira Santa Bárbara"
+                 class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Santa Bárbara</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~25 km do centro</span>
                 </div>
-            </div>
-
-            <!-- Cachoeira 2: Cachoeira do Segredo (visível) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="/images/cachoeiras/segredo.png" alt="Cachoeira do Segredo" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Segredo</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~30 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>15 min de trilha (leve)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Cachoeira que cai dentro de uma caverna natural, formando um poço com
-                        águas geladas e transparentes.</p>
-                    <button onclick="openCachoeiraModal('segredo')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>20 min de trilha (leve a moderada)</span>
                 </div>
+                <p class="text-[#A17C5E] mb-4">Queda d'água de cerca de 40 metros, poço profundo e águas
+                    cristalinas. Ambiente cercado pela mata nativa do Cerrado.</p>
+                <button onclick="openCachoeiraModal('santa_barbara')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
             </div>
-
-            <!-- Cachoeira 3: Almécegas I e II (visível) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
-                <img src="/images/cachoeiras/almecegas.png" alt="Almécegas I e II" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Almécegas I e II</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~35 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>10-15 min de trilha (fácil)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Almécegas I: Queda livre de mais de 50 metros. Almécegas II: Poço
-                        maior, ideal para banho e fotos.</p>
-                    <button onclick="openCachoeiraModal('almecegas')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
-                </div>
-            </div>
-
-            <!-- Cachoeira 4: Cachoeira do Cristal (oculta) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
-                 id="cristal-card">
-                <img src="/images/cachoeiras/cristal.png" alt="Cachoeira do Cristal" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Cristal</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~20 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>5-10 min de trilha (muito fácil)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Água transparente como cristal, com tons de esmeralda e
-                        azul-turquesa. Poço raso e largo, cercado por pedras lisas.</p>
-                    <button onclick="openCachoeiraModal('cristal')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
-                </div>
-            </div>
-
-            <!-- Cachoeira 5: Cachoeira do Loquinhas (oculta) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
-                 id="loquinhas-card">
-                <img src="/images/cachoeiras/loquinha.png" alt="Cachoeira do Loquinhas"
-                     class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Loquinhas</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~18 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>5 min de trilha (fácil)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Conjunto de pequenas quedas e tobogãs naturais de pedra, com poços
-                        interligados. Diversão garantida!</p>
-                    <button onclick="openCachoeiraModal('loquinhas')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
-                </div>
-            </div>
-
-            <!-- Cachoeira 6: Poço Encantado (oculto) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
-                 id="poco-encantado-card">
-                <img src="/images/cachoeiras/poco_encantado.png" alt="Poço Encantado" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Poço Encantado</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~28 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>10 min de trilha (leve)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Poço profundo com águas cristalinas, onde em dias ensolarados um raio
-                        de luz solar atinge o fundo.</p>
-                    <button onclick="openCachoeiraModal('poco_encantado')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
-                </div>
-            </div>
-
-            <!-- Cachoeira 7: Gruta da Lapinha (oculta) -->
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
-                 id="lapinha-card">
-                <img src="/images/cachoeiras/lapinha.png" alt="Gruta da Lapinha" class="w-full h-48 object-cover">
-                <div class="p-6">
-                    <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Gruta da Lapinha</h3>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                        <span>~22 km do centro</span>
-                    </div>
-                    <div class="flex items-center text-[#A17C5E] mb-4">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                             stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        <span>10 min de trilha (leve)</span>
-                    </div>
-                    <p class="text-[#A17C5E] mb-4">Gruta cárstica com estalactites, estalagmites e formações rochosas
-                        milenares. Ambiente fresco e misterioso.</p>
-                    <button onclick="openCachoeiraModal('lapinha')"
-                            class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
-                        Saiba mais
-                    </button>
-                </div>
-            </div>
-
         </div>
 
-        <!-- Botão para mostrar mais cachoeiras -->
-        <div class="text-center mt-10">
-            <button id="toggle-cachoeiras-btn"
-                    class="bg-[#06D6A0] hover:bg-[#05c18d] text-white py-3 px-6 rounded-full font-semibold transition-colors"
-                    onclick="toggleCachoeiras()">
-                Ver mais cachoeiras
-            </button>
+        <!-- Cachoeira 2: Cachoeira do Segredo (visível) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <img src="/images/cachoeiras/segredo.png" alt="Cachoeira do Segredo" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Segredo</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~30 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>15 min de trilha (leve)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Cachoeira que cai dentro de uma caverna natural, formando um poço com
+                    águas geladas e transparentes.</p>
+                <button onclick="openCachoeiraModal('segredo')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
         </div>
+
+        <!-- Cachoeira 3: Almécegas I e II (visível) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
+            <img src="/images/cachoeiras/almecegas.png" alt="Almécegas I e II" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Almécegas I e II</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~35 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10-15 min de trilha (fácil)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Almécegas I: Queda livre de mais de 50 metros. Almécegas II: Poço
+                    maior, ideal para banho e fotos.</p>
+                <button onclick="openCachoeiraModal('almecegas')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+
+        <!-- Cachoeira 4: Cachoeira do Cristal (oculta) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+             id="cristal-card">
+            <img src="/images/cachoeiras/cristal.png" alt="Cachoeira do Cristal" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Cristal</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~20 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>5-10 min de trilha (muito fácil)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Água transparente como cristal, com tons de esmeralda e
+                    azul-turquesa. Poço raso e largo, cercado por pedras lisas.</p>
+                <button onclick="openCachoeiraModal('cristal')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+
+        <!-- Cachoeira 5: Cachoeira do Loquinhas (oculta) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+             id="loquinhas-card">
+            <img src="/images/cachoeiras/loquinha.png" alt="Cachoeira do Loquinhas"
+                 class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Cachoeira do Loquinhas</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~18 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>5 min de trilha (fácil)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Conjunto de pequenas quedas e tobogãs naturais de pedra, com poços
+                    interligados. Diversão garantida!</p>
+                <button onclick="openCachoeiraModal('loquinhas')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+
+        <!-- Cachoeira 6: Poço Encantado (oculto) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+             id="poco-encantado-card">
+            <img src="/images/cachoeiras/poco_encantado.png" alt="Poço Encantado" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Poço Encantado</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~28 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 min de trilha (leve)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Poço profundo com águas cristalinas, onde em dias ensolarados um raio
+                    de luz solar atinge o fundo.</p>
+                <button onclick="openCachoeiraModal('poco_encantado')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+
+        <!-- Cachoeira 7: Gruta da Lapinha (oculta) -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow hidden"
+             id="lapinha-card">
+            <img src="/images/cachoeiras/lapinha.png" alt="Gruta da Lapinha" class="w-full h-48 object-cover">
+            <div class="p-6">
+                <h3 class="title-font text-2xl text-[#06D6A0] mb-2">Gruta da Lapinha</h3>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    <span>~22 km do centro</span>
+                </div>
+                <div class="flex items-center text-[#A17C5E] mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+                         stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>10 min de trilha (leve)</span>
+                </div>
+                <p class="text-[#A17C5E] mb-4">Gruta cárstica com estalactites, estalagmites e formações rochosas
+                    milenares. Ambiente fresco e misterioso.</p>
+                <button onclick="openCachoeiraModal('lapinha')"
+                        class="w-full bg-[#A17C5E] hover:bg-[#8a6a4f] text-white py-2 rounded-full transition-colors">
+                    Saiba mais
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Botão para mostrar mais cachoeiras -->
+    <div class="text-center mt-10">
+        <button id="toggle-cachoeiras-btn"
+                class="bg-[#06D6A0] hover:bg-[#05c18d] text-white py-3 px-6 rounded-full font-semibold transition-colors"
+                onclick="toggleCachoeiras()">
+            Ver mais cachoeiras
+        </button>
+    </div>
     </div>
 </section>
 
@@ -846,7 +887,7 @@
 <section id="estrutura" class="py-16 bg-[#F8F5F2]">
     <div class="container mx-auto px-4">
         <h2 class="title-font text-4xl text-center text-[#06D6A0] mb-6">Espaços feitos para relaxar</h2>
-        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md">
+        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md hover:rotate-2 transition-transform duration-300">
             Espaço de conexão: redes convidativas, lazer sereno e conversas que fazem bem.
         </div>
 
@@ -875,7 +916,7 @@
 <section id="pets" class="py-16 bg-white">
     <div class="container mx-auto px-4">
         <h2 class="title-font text-4xl text-center text-[#06D6A0] mb-6">Seu pet é da família? Aqui ele também é!</h2>
-        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md">
+        <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 text-center mx-auto mb-12 max-w-md hover:rotate-2 transition-transform duration-300">
             Na Pousada Jatobá, até o dog ganha colar de flores!
         </div>
 
