@@ -674,3 +674,45 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.getElementById('menu-toggle')?.addEventListener('click', () => {
     document.getElementById('menu').classList.toggle('hidden');
 });
+// ==============================
+// 📩 FORMULÁRIO PARA WHATSAPP
+// ==============================
+
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita o envio padrão (não tem action)
+
+    // Captura os valores
+    const name = document.getElementById('name').value.trim() || 'Não informado';
+    const email = document.getElementById('email').value.trim() || 'Não informado';
+    const phone = document.getElementById('phone').value.trim() || 'Não informado';
+    const checkin = document.getElementById('checkin').value || 'Não informado';
+    const checkout = document.getElementById('checkout').value || 'Não informado';
+    const message = document.getElementById('message').value.trim() || 'Sem mensagem adicional.';
+
+    // Formata a mensagem
+    const whatsappNumber = '5562996688008'; // Seu número com DDD e código do país
+    const greeting = `Olá! Gostaria de fazer uma reserva:`;
+
+    const body = `
+${greeting}
+🔹 *Nome:* ${name}
+🔹 *E-mail:* ${email}
+🔹 *Telefone:* ${phone}
+🔹 *Check-in:* ${formatDate(checkin)}
+🔹 *Check-out:* ${formatDate(checkout)}
+🔹 *Mensagem:* ${message}
+    `.trim();
+
+    // Codifica para URL
+    const encodedBody = encodeURIComponent(body);
+
+    // Abre o WhatsApp
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedBody}`, '_blank');
+});
+
+// Função para formatar data (opcional)
+function formatDate(dateStr) {
+    if (!dateStr || dateStr === 'Não informado') return dateStr;
+    const [year, month, day] = dateStr.split('-');
+    return `${day}/${month}/${year}`;
+}
