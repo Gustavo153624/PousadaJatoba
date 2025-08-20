@@ -97,8 +97,6 @@
         <!-- Título principal -->
         <h2 class="title-font text-4xl text-[#06D6A0] mb-6">Nossos Chalés e Suítes</h2>
 
-        <p class="text-xl text-[#A17C5E] mb-8">Feitos para você descansar em paz</p>
-
         <div class="wood-sign text-[#A17C5E] text-xl px-6 py-3 max-w-md mx-auto mb-4 hover:rotate-2 transition-transform duration-300">
             "Paz não é ausência de barulho. É presença de silêncio."
         </div>
@@ -1108,159 +1106,159 @@
         </div>
     </div>
 </section>
-    <!-- Modal de Acomodação -->
-    <div id="modal-acomodacao"
-         class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-start justify-center z-50 p-4 pt-20 overflow-y-auto">
-        <div class="bg-white rounded-lg w-full max-w-4xl relative">
-            <button onclick="closeModal('modal-acomodacao')"
-                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+<!-- Modal de Acomodação -->
+<div id="modal-acomodacao"
+     class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-start justify-center z-50 p-4 pt-20 overflow-y-auto">
+    <div class="bg-white rounded-lg w-full max-w-4xl relative">
+        <button onclick="closeModal('modal-acomodacao')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="p-6">
+            <h2 id="modal-titulo" class="text-3xl font-bold text-[#06D6A0] mb-2"></h2>
+            <p id="modal-tipo" class="text-[#A17C5E] mb-4"></p>
+            <p id="modal-descricao" class="text-[#333] mb-4"></p>
+
+            <h3 class="text-xl font-bold text-[#06D6A0] mb-2">Detalhes</h3>
+            <ul class="mb-4">
+                <li class="flex items-start mb-1"><strong>Capacidade:</strong> <span
+                        id="modal-capacidade" class="ml-2"></span></li>
+                <li class="flex items-start"><strong>Comodidades:</strong>
+                    <ul id="modal-comodidades" class="list-none ml-2 space-y-1"></ul>
+                </li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-[#06D6A0] mb-2">Fotos</h3>
+            <div id="modal-galeria" class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4"></div>
+
+            <div class="flex flex-col sm:flex-row justify-between items-center mt-6">
+                <p class="text-xl font-bold text-[#FF6B35] mb-4 sm:mb-0"><span
+                        id="modal-preco"></span></p>
+                <button id="modal-reservar-btn"
+                        class="bg-[#06D6A0] hover:bg-[#04b58a] text-white font-bold py-2 px-6 rounded-full transition-colors">
+                    Reservar este chalé
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de Cachoeira -->
+<div id="modal-cachoeira"
+     class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4 pt-20 overflow-y-auto">
+    <div class="bg-white rounded-lg w-full max-w-2xl relative">
+        <button onclick="closeModal('modal-cachoeira')"
+                class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                 viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+        <div class="p-6">
+            <h2 id="modal-cachoeira-titulo" class="text-3xl font-bold text-[#06D6A0] mb-4"></h2>
+            <img id="modal-cachoeira-imagem" src="" alt=""
+                 class="w-full h-64 object-cover rounded-lg mb-4">
+
+            <div class="flex items-center text-[#A17C5E] mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
                      viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"/>
+                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
-            </button>
-            <div class="p-6">
-                <h2 id="modal-titulo" class="text-3xl font-bold text-[#06D6A0] mb-2"></h2>
-                <p id="modal-tipo" class="text-[#A17C5E] mb-4"></p>
-                <p id="modal-descricao" class="text-[#333] mb-4"></p>
-
-                <h3 class="text-xl font-bold text-[#06D6A0] mb-2">Detalhes</h3>
-                <ul class="mb-4">
-                    <li class="flex items-start mb-1"><strong>Capacidade:</strong> <span
-                            id="modal-capacidade" class="ml-2"></span></li>
-                    <li class="flex items-start"><strong>Comodidades:</strong>
-                        <ul id="modal-comodidades" class="list-none ml-2 space-y-1"></ul>
-                    </li>
-                </ul>
-
-                <h3 class="text-xl font-bold text-[#06D6A0] mb-2">Fotos</h3>
-                <div id="modal-galeria" class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-4"></div>
-
-                <div class="flex flex-col sm:flex-row justify-between items-center mt-6">
-                    <p class="text-xl font-bold text-[#FF6B35] mb-4 sm:mb-0"><span
-                            id="modal-preco"></span></p>
-                    <button id="modal-reservar-btn"
-                            class="bg-[#06D6A0] hover:bg-[#04b58a] text-white font-bold py-2 px-6 rounded-full transition-colors">
-                        Reservar este chalé
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Modal de Cachoeira -->
-    <div id="modal-cachoeira"
-         class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 p-4 pt-20 overflow-y-auto">
-        <div class="bg-white rounded-lg w-full max-w-2xl relative">
-            <button onclick="closeModal('modal-cachoeira')"
-                    class="absolute top-4 right-4 text-gray-500 hover:text-gray-700">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                <span class="mr-4">Distância: <span
+                        id="modal-cachoeira-distancia"></span></span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
                      viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                          d="M6 18L18 6M6 6l12 12"/>
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
                 </svg>
+                <span>Trilha: <span id="modal-cachoeira-trilha"></span></span>
+            </div>
+
+            <p id="modal-cachoeira-descricao" class="text-[#333] mb-4"></p>
+
+            <div id="modal-cachoeira-destaques" class="mb-3 hidden">
+                <h4 class="font-bold text-[#06D6A0]">Destaques:</h4>
+                <p id="modal-cachoeira-destaques-texto" class="text-[#333]"></p>
+            </div>
+            <div id="modal-cachoeira-dica" class="mb-3 hidden">
+                <h4 class="font-bold text-[#06D6A0]">Dica:</h4>
+                <p id="modal-cachoeira-dica-texto" class="text-[#333]"></p>
+            </div>
+            <div id="modal-cachoeira-observacao" class="mb-3 hidden">
+                <h4 class="font-bold text-[#06D6A0]">Observação:</h4>
+                <p id="modal-cachoeira-observacao-texto" class="text-[#333]"></p>
+            </div>
+            <div id="modal-cachoeira-perigo" class="mb-3 hidden">
+                <h4 class="font-bold text-red-500">Perigo:</h4>
+                <p id="modal-cachoeira-perigo-texto" class="text-[#333]"></p>
+            </div>
+            <div id="modal-cachoeira-ideal" class="mb-3 hidden">
+                <h4 class="font-bold text-[#06D6A0]">Ideal para:</h4>
+                <p id="modal-cachoeira-ideal-texto" class="text-[#333]"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox" onclick="Lightbox.close()">
+    <span class="Lightbox.close()">&times;</span>
+    <div id="lightbox-content" class="lightbox-content"></div>
+</div>
+<!-- Modal da Galeria -->
+<div id="gallery-modal"
+     class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-start justify-center pt-10 px-4 hidden">
+    <div class="bg-white rounded-lg max-w-6xl max-h-full overflow-hidden w-full shadow-2xl">
+        <!-- Cabeçalho com X para fechar -->
+        <div class="flex justify-between items-center p-4 border-b">
+            <h3 id="gallery-modal-title" class="text-2xl font-bold text-gray-800">Galeria Completa</h3>
+            <button
+                    onclick="closeGalleryModal()"
+                    class="text-3xl text-gray-600 hover:text-gray-800 transition duration-200 transform hover:scale-110"
+                    aria-label="Fechar galeria"
+            >
+                &times;
             </button>
-            <div class="p-6">
-                <h2 id="modal-cachoeira-titulo" class="text-3xl font-bold text-[#06D6A0] mb-4"></h2>
-                <img id="modal-cachoeira-imagem" src="" alt=""
-                     class="w-full h-64 object-cover rounded-lg mb-4">
+        </div>
 
-                <div class="flex items-center text-[#A17C5E] mb-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    </svg>
-                    <span class="mr-4">Distância: <span
-                            id="modal-cachoeira-distancia"></span></span>
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none"
-                         viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                    <span>Trilha: <span id="modal-cachoeira-trilha"></span></span>
-                </div>
+        <!-- Abas de Seções -->
+        <div class="flex flex-wrap border-b px-4 bg-gray-50">
+            <button class="tab-button active px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600"
+                    data-section="all">Todas
+            </button>
+            <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                    data-section="acomodacoes">Acomodações
+            </button>
+            <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="estrutura">
+                Estrutura
+            </button>
+            <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                    data-section="experiencia">Natureza
+            </button>
+            <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="pets">
+                Pets
+            </button>
+            <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
+                    data-section="cachoeiras">Cachoeiras
+            </button>
+        </div>
 
-                <p id="modal-cachoeira-descricao" class="text-[#333] mb-4"></p>
-
-                <div id="modal-cachoeira-destaques" class="mb-3 hidden">
-                    <h4 class="font-bold text-[#06D6A0]">Destaques:</h4>
-                    <p id="modal-cachoeira-destaques-texto" class="text-[#333]"></p>
-                </div>
-                <div id="modal-cachoeira-dica" class="mb-3 hidden">
-                    <h4 class="font-bold text-[#06D6A0]">Dica:</h4>
-                    <p id="modal-cachoeira-dica-texto" class="text-[#333]"></p>
-                </div>
-                <div id="modal-cachoeira-observacao" class="mb-3 hidden">
-                    <h4 class="font-bold text-[#06D6A0]">Observação:</h4>
-                    <p id="modal-cachoeira-observacao-texto" class="text-[#333]"></p>
-                </div>
-                <div id="modal-cachoeira-perigo" class="mb-3 hidden">
-                    <h4 class="font-bold text-red-500">Perigo:</h4>
-                    <p id="modal-cachoeira-perigo-texto" class="text-[#333]"></p>
-                </div>
-                <div id="modal-cachoeira-ideal" class="mb-3 hidden">
-                    <h4 class="font-bold text-[#06D6A0]">Ideal para:</h4>
-                    <p id="modal-cachoeira-ideal-texto" class="text-[#333]"></p>
-                </div>
-            </div>
+        <!-- Conteúdo da Galeria -->
+        <div id="gallery-content"
+             class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 p-4 max-h-96 overflow-y-auto">
+            <!-- Imagens carregadas via JS -->
         </div>
     </div>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" onclick="Lightbox.close()">
-        <span class="Lightbox.close()">&times;</span>
-        <div id="lightbox-content" class="lightbox-content"></div>
-    </div>
-    <!-- Modal da Galeria -->
-    <div id="gallery-modal"
-         class="fixed inset-0 bg-black bg-opacity-90 z-50 flex items-start justify-center pt-10 px-4 hidden">
-        <div class="bg-white rounded-lg max-w-6xl max-h-full overflow-hidden w-full shadow-2xl">
-            <!-- Cabeçalho com X para fechar -->
-            <div class="flex justify-between items-center p-4 border-b">
-                <h3 id="gallery-modal-title" class="text-2xl font-bold text-gray-800">Galeria Completa</h3>
-                <button
-                        onclick="closeGalleryModal()"
-                        class="text-3xl text-gray-600 hover:text-gray-800 transition duration-200 transform hover:scale-110"
-                        aria-label="Fechar galeria"
-                >
-                    &times;
-                </button>
-            </div>
-
-            <!-- Abas de Seções -->
-            <div class="flex flex-wrap border-b px-4 bg-gray-50">
-                <button class="tab-button active px-4 py-2 text-sm font-medium text-blue-600 border-b-2 border-blue-600"
-                        data-section="all">Todas
-                </button>
-                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
-                        data-section="acomodacoes">Acomodações
-                </button>
-                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="estrutura">
-                    Estrutura
-                </button>
-                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
-                        data-section="experiencia">Natureza
-                </button>
-                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600" data-section="pets">
-                    Pets
-                </button>
-                <button class="tab-button px-4 py-2 text-sm text-gray-600 hover:text-blue-600"
-                        data-section="cachoeiras">Cachoeiras
-                </button>
-            </div>
-
-            <!-- Conteúdo da Galeria -->
-            <div id="gallery-content"
-                 class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 p-4 max-h-96 overflow-y-auto">
-                <!-- Imagens carregadas via JS -->
-            </div>
-        </div>
-    </div>
-    <script src="js/main.js" defer></script>
+</div>
+<script src="js/main.js" defer></script>
 </body>
 
 </html>
