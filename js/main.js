@@ -82,7 +82,7 @@ const DATA = {
             ]
         },
         caja: {
-            nome: "Cajá",
+            nome: "Cajá", // ✅ Corrigido: nome com acento
             tipo: "Suíte",
             descricao: "Descontraída e espaçosa, a Suíte Cajá acomoda até quatro pessoas em camas de solteiro. Perfeita para grupos de amigos ou viajantes que valorizam conforto e liberdade.",
             capacidade: "4 pessoas (4 camas de solteiro)",
@@ -326,6 +326,9 @@ function openModal(id) {
     if (modal) {
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        // Foca no botão de fechar
+        const closeBtn = modal.querySelector('[aria-label="Fechar"]');
+        if (closeBtn) setTimeout(() => closeBtn.focus(), 100);
     }
 }
 
@@ -359,7 +362,7 @@ function openAcomodacaoModal(nome) {
     document.getElementById('modal-preco').textContent = acomodacao.preco;
     document.getElementById('modal-reservar-btn').onclick = () => {
         const msg = encodeURIComponent(`Olá! Gostaria de reservar a ${acomodacao.tipo} ${acomodacao.nome} para [datas]. Podem me ajudar?`);
-        window.open(`https://wa.me/5562996688008?text=${msg}`, '_blank');
+        window.open(`https://wa.me/5562996688008?text=${msg}`, '_blank', 'noopener');
     };
 
     const galeria = document.getElementById('modal-galeria');
@@ -374,6 +377,7 @@ function openAcomodacaoModal(nome) {
         div.onclick = () => openLightbox(acomodacao.fotos, index);
         div.onkeydown = (e) => {
             if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
                 openLightbox(acomodacao.fotos, index);
             }
         };
@@ -460,7 +464,6 @@ const Lightbox = {
             </div>
         `;
 
-
         document.body.appendChild(this.element);
 
         // Eventos
@@ -535,14 +538,14 @@ const Lightbox = {
 
         img.addEventListener('touchstart', e => {
             startX = e.touches[0].clientX;
-        }, {passive: true});
+        }, { passive: true });
         img.addEventListener('touchend', e => {
             const endX = e.changedTouches[0].clientX;
             const diff = startX - endX;
             if (Math.abs(diff) > 50) {
                 diff > 0 ? this.next() : this.prev();
             }
-        }, {passive: true});
+        }, { passive: true });
     }
 };
 
@@ -556,7 +559,6 @@ function openLightbox(fotos, index) {
 // ==============================
 
 function openGalleryModal(section = 'all') {
-
     const content = document.getElementById('gallery-content');
     const title = document.getElementById('gallery-modal-title');
 
@@ -586,10 +588,9 @@ function openGalleryModal(section = 'all') {
     openModal('gallery-modal');
 }
 
-
 // Função para fechar o modal da galeria
 function closeGalleryModal() {
-    closeModal('gallery-modal'); // ✅ Usa função centralizada
+    closeModal('gallery-modal');
 }
 
 // Fechar ao clicar fora do conteúdo
@@ -598,6 +599,7 @@ document.getElementById('gallery-modal').addEventListener('click', function (e) 
         closeGalleryModal();
     }
 });
+
 // Fecha modais com ESC
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
@@ -611,6 +613,7 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
 // Abas de galeria
 document.addEventListener('DOMContentLoaded', () => {
     const tabButtons = document.querySelectorAll('.tab-button');
@@ -645,6 +648,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Define aba inicial
     setActiveTab('all');
 });
+
 // ==============================
 // 🔧 FILTROS DE ACOMODAÇÕES
 // ==============================
@@ -674,14 +678,14 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 document.getElementById('menu-toggle')?.addEventListener('click', () => {
     document.getElementById('menu').classList.toggle('hidden');
 });
+
 // ==============================
 // 📩 FORMULÁRIO PARA WHATSAPP
 // ==============================
 
 document.getElementById('contact-form').addEventListener('submit', function (e) {
-    e.preventDefault(); // Evita o envio padrão (não tem action)
+    e.preventDefault();
 
-    // Captura os valores
     const name = document.getElementById('name').value.trim() || 'Não informado';
     const email = document.getElementById('email').value.trim() || 'Não informado';
     const phone = document.getElementById('phone').value.trim() || 'Não informado';
@@ -689,12 +693,9 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const checkout = document.getElementById('checkout').value || 'Não informado';
     const message = document.getElementById('message').value.trim() || 'Sem mensagem adicional.';
 
-    // Formata a mensagem
-    const whatsappNumber = '5562996688008'; // Seu número com DDD e código do país
-    const greeting = `Olá! Gostaria de fazer uma reserva:`;
-
+    const whatsappNumber = '5562996688008';
     const body = `
-${greeting}
+Olá! Gostaria de fazer uma reserva:
 🔹 *Nome:* ${name}
 🔹 *E-mail:* ${email}
 🔹 *Telefone:* ${phone}
@@ -703,14 +704,11 @@ ${greeting}
 🔹 *Mensagem:* ${message}
     `.trim();
 
-    // Codifica para URL
     const encodedBody = encodeURIComponent(body);
-
-    // Abre o WhatsApp
-    window.open(`https://wa.me/${whatsappNumber}?text=${encodedBody}`, '_blank');
+    window.open(`https://wa.me/${whatsappNumber}?text=${encodedBody}`, '_blank', 'noopener');
 });
 
-// Função para formatar data (opcional)
+// Função para formatar data
 function formatDate(dateStr) {
     if (!dateStr || dateStr === 'Não informado') return dateStr;
     const [year, month, day] = dateStr.split('-');
