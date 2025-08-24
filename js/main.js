@@ -538,14 +538,14 @@ const Lightbox = {
 
         img.addEventListener('touchstart', e => {
             startX = e.touches[0].clientX;
-        }, { passive: true });
+        }, {passive: true});
         img.addEventListener('touchend', e => {
             const endX = e.changedTouches[0].clientX;
             const diff = startX - endX;
             if (Math.abs(diff) > 50) {
                 diff > 0 ? this.next() : this.prev();
             }
-        }, { passive: true });
+        }, {passive: true});
     }
 };
 
@@ -689,6 +689,8 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     const name = document.getElementById('name').value.trim() || 'Não informado';
     const email = document.getElementById('email').value.trim() || 'Não informado';
     const phone = document.getElementById('phone').value.trim() || 'Não informado';
+    const guests = document.getElementById('guests').value.trim() || 'Não informado';
+    const accommodation = document.getElementById('accommodation').value.trim() || 'Não informado';
     const checkin = document.getElementById('checkin').value || 'Não informado';
     const checkout = document.getElementById('checkout').value || 'Não informado';
     const message = document.getElementById('message').value.trim() || 'Sem mensagem adicional.';
@@ -699,6 +701,8 @@ Olá! Gostaria de fazer uma reserva:
 🔹 *Nome:* ${name}
 🔹 *E-mail:* ${email}
 🔹 *Telefone:* ${phone}
+🔹 *Número de pessoas:* ${guests}
+🔹 *Tipo de acomodação:* ${accommodation}
 🔹 *Check-in:* ${formatDate(checkin)}
 🔹 *Check-out:* ${formatDate(checkout)}
 🔹 *Mensagem:* ${message}
